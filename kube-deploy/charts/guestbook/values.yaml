@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   rigistry: liwei2151284.jfrog.io
   repository: liwei2151284.jfrog.io/docker-local/guestbook-microservices-k8s/guestbook-service
-  tag: discovery_version
+  tag: guestbook_version
   pullPolicy: IfNotPresent
 
 service:
