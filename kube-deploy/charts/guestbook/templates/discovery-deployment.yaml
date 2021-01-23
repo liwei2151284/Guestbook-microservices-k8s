@@ -6,6 +6,9 @@ metadata:
     run: discovery-service
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      run: discovery-service
   template:
     metadata:
       labels:
