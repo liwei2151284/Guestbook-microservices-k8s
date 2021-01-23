@@ -5,15 +5,26 @@
 replicaCount: 1
 
 image:
-  rigistry: art.local:8081
-  repository: art.local:8081/docker/guestbook-microservices-k8s/guestbook-service
-  tag: latest
+  rigistry: liwei2151284.jfrog.io
+  repository: liwei2151284.jfrog.io/docker-local/guestbook-microservices-k8s/guestbook-service
+  tag: discovery_version
   pullPolicy: IfNotPresent
 
 service:
   type: NodePort
   port: 2222
   nodePort: 30222
+
+discovery_image:
+  rigistry: liwei2151284.jfrog.io
+  repository: liwei2151284.jfrog.io/docker-local/guestbook-microservices-k8s/discovery-service
+  tag: discovery_version
+  pullPolicy: IfNotPresent
+
+discovery_service:
+  type: NodePort
+  port: 8761
+  nodePort: 31002
 
 ingress:
   enabled: false

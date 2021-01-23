@@ -8,8 +8,8 @@ metadata:
 spec:
   ports:
     - name: port1
-      port: 8761
-      nodePort: 31002
+      port: {{ .Values.discovery_service.port }}
+      nodePort: {{ .Values.discovery_service.nodePort }}
       protocol: TCP
   selector:
     run: discovery-service

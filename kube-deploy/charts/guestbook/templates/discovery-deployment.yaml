@@ -13,9 +13,9 @@ spec:
     spec:
       containers:
         - name: discovery-service
-          image: art.local:8081/docker/guestbook-microservices-k8s/discovery-service
+          image: "{{ .Values.discovery_image.repository }}:{{ .Values.discovery_image.tag }}"
           ports:
-            - containerPort: 8761
+            - containerPort: {{ .Values.discovery_service.port }}
               protocol: TCP
       imagePullSecrets:
         - name: regcred-local
