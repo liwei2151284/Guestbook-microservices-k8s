@@ -3,5 +3,5 @@ appVersion: "1.1"
 description: A Helm chart for Kubernetes
 name: guestbook
 version: 0.1.chartversion
-guestbook-service-version: {{ .image.tag }}
-discovery-service-version: {{ .discovery_image.tag }}
+guestbook-service-version: guestbook_version
+discovery-service-version: discovery_version
