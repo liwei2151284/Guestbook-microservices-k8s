@@ -5,7 +5,7 @@ metadata:
   labels:
     run: discovery-service
 spec:
-  replicas: {{ .Values.podCount }}
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       run: discovery-service
