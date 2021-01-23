@@ -5,7 +5,7 @@ metadata:
   labels:
     run: {{ .Release.Name }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       run: {{ .Release.Name }}
